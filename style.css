@@ -203,11 +203,10 @@ input, textarea, .form-btn {
     font-size: 14px;
     font-style: italic;
     color: #000000;
-    margin: 0 10px;
 }
 
 .btn {
-    margin: 10px 0  0 14px;
+    margin: 10px 0  0 24px;
 }
 
 .profil {
@@ -257,6 +256,7 @@ input, textarea, .form-btn {
 
     .form-group {
         display: block;
+        padding: 0 20px;
     }
 
     label {
@@ -264,18 +264,14 @@ input, textarea, .form-btn {
         line-height: 45px;
     }
 
-    input, textarea, .form-group {
-        width: calc(100% - 30px);
+    input, textarea {
+        width: calc(100% - 20px);
         margin: 0 auto;
     }
 
     .form-btn {
         margin: 20px auto 30px;
         text-align: right
-    }
-
-    .btn {
-        margin-right: 12px;
     }
 
     .profil {
