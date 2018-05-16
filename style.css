@@ -143,7 +143,7 @@ footer {
 .galery-image {
     width: 30%;
     background-color: #ffffff;
-    padding: 10px;
+    padding: 1%;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -240,6 +240,11 @@ input, textarea, .form-btn {
 
     .row-setout-text, .row-setout-img {
         width: calc(100% - 5px);
+        margin: 0 auto;
+    }
+
+    .row-setout-img img {
+        margin: 0 auto;
     }
 
     .container-galery {
