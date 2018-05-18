@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('.panel, .times').hide();
+    $('.panel').hide();
     //$('.container-slider').hide();
 
             $('.menu a').on('click', function() {
@@ -20,11 +20,10 @@ $(document).ready(function() {
 
     $(".galery-image a").click( function(ev) {
         ev.preventDefault();
-       
+        
         var link = $(this);
-        $('.times').show();
-
-        $('.container-slider').css({'transform' : 'scale(1)'} , function() { document.location = link.attr("rel");   //);
+        
+        $('.container-slider').css({'transform' : 'scale(1)'} , function() { document.location = link.attr("rel");
 
         //$(this).attr("href");
         //, function() { document.location = link.attr("href");
@@ -42,7 +41,7 @@ $(document).ready(function() {
 
     $('.times').on('click', function() {
         $('.container-slider').css({'transform' : 'scale(0)'});
-    }),
+    });
  
     $('.owl-carousel').owlCarousel({
         loop:true,

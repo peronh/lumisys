@@ -114,6 +114,10 @@ footer {
     background-color: #eeeeee;
 }
 
+.container-setout {
+    width: 100%;
+}
+
 .row-setout {
     display: flex;
     justify-content: space-between;
