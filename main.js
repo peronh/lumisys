@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('.panel').hide();
+    $('.panel, .times').hide();
     //$('.container-slider').hide();
 
             $('.menu a').on('click', function() {
@@ -21,6 +21,7 @@ $(document).ready(function() {
     $(".galery-image a").click( function(ev) {
         ev.preventDefault();
         var link = $(this);
+        $('.times').show();
 
         $('.container-slider').css({'z-index' : '1000'} , function() { document.location = link.attr("href");   //);
 
@@ -32,8 +33,8 @@ $(document).ready(function() {
     
         
         $('.card-body button').click(function() {
-        var text_value = $("#registerName").val();
-        if(text_value=='') {
+        var textValue = $("#registerName").val();
+        if(textValue=='') {
         alert("Kérjük, hogy a Név és az E-mail cím mezőket ne hagyja üresen");
         }
         });
