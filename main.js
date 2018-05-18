@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
     $('.panel').hide();
+    //$('.container-slider').hide();
 
             $('.menu a').on('click', function() {
                 $('.menu a.active').removeClass('active');
@@ -16,4 +17,50 @@ $(document).ready(function() {
             });
         });
     }); 
+
+    $(".galery-image a").click( function(ev) {
+        ev.preventDefault();
+        var link = $(this);
+
+        $('.container-slider').css({'z-index' : '1000'} , function() { document.location = link.attr("href");   //);
+
+        //$(this).attr("href");
+        //, function() { document.location = link.attr("href");
+        });
+    });
+
+    
+        
+        $('.card-body button').click(function() {
+        var text_value = $("#registerName").val();
+        if(text_value=='') {
+        alert("Kérjük, hogy a Név és az E-mail cím mezőket ne hagyja üresen");
+        }
+        });
+
+    $('.times').on('click', function() {
+        $('.container-slider').css({'z-index' : '-1000'});
+    }),
+ 
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            }/*,
+            768:{
+                items:1
+            },
+            992:{
+                items:1
+            },
+            1920:{
+                items:1
+            }*/
+        }
+	});
+
+
 });
