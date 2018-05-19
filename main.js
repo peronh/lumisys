@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    $('.panel, .container-alert, .container-register').hide();
+
 // oldal lapozó
 
     $('.panel, .container-alert, .container-register').hide();
@@ -23,7 +25,7 @@ $(document).ready(function() {
     $(".galery-image a").click( function(ev) {
         ev.preventDefault();
         var link = $(this);
-        $('.container-slider').css({'transform' : 'scale(1)'} , function() { 
+        $('.container-slider').css({'transform' : 'scale(1)' , '-webkit-transform' : 'scale(1)', '-ms-transform' : 'scale(1)'} , function() { 
             document.location = link.attr("#href");
         });
     });
