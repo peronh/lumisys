@@ -41,27 +41,33 @@ $(document).ready(function() {
             var textName = $("#registerName").val();
             var textEmail = $('#registerEmail').val();
 
-            if(textName  == '') {
+            if(textName == '') {
                 $('.container-alert').fadeIn(200);
                 $('.container-alert').css({'z-index' : '1'}); 
-                    $('.row-alert').on('click', function() {
-                        $('.container-alert').fadeOut(200);
-                    }); 
+                $(".form-btn input").attr("type", "button");
+                $('.row-alert').on('click', function() {
+                    $('.container-alert').fadeOut(200);
+                }); 
             }
+                        
             else if(textEmail  == '') {
                 $('.container-alert').fadeIn(200); 
-                    $('.row-alert').on('click', function() {
-                        $('.container-alert').fadeOut(200);
-                    });          
-                }
-            else {
+                $('.row-alert').on('click', function() {    
+                $('.container-alert').fadeOut(200);
+                });          
+            }
+
+            else if (textEmail  != '') {
+                $(".form-btn input").attr("type", "submit");
+            }
+            /*
+            else if ($('form').submit()){
                 $('.container-register').fadeIn(200); 
                 $('.container-register').css({'z-index' : '1'}); 
                 $('.row-register h2').on('click', function() {
                     $('.container-register').fadeOut(200);
-                    $('form').submit();
-                });
-            }
+                }); 
+            }*/
         });
 
     // owl carousel 
