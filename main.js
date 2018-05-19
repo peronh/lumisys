@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-    $('.panel').hide();
-    //$('.container-slider').hide();
+// oldal lapozó
 
+    $('.panel, .container-alert, .container-register').hide();
             $('.menu a').on('click', function() {
                 $('.menu a.active').removeClass('active');
                 $(this).addClass('active');
@@ -18,30 +18,51 @@ $(document).ready(function() {
         });
     }); 
 
+    // slider 
+
     $(".galery-image a").click( function(ev) {
         ev.preventDefault();
-        
         var link = $(this);
-        
-        $('.container-slider').css({'transform' : 'scale(1)'} , function() { document.location = link.attr("rel");
-
-        //$(this).attr("href");
-        //, function() { document.location = link.attr("href");
+        $('.container-slider').css({'transform' : 'scale(1)'} , function() { 
+            document.location = link.attr("#href");
         });
     });
-
-    
-        
-        $('.card-body button').click(function() {
-        var textValue = $("#registerName").val();
-        if(textValue=='') {
-        alert("Kérjük, hogy a Név és az E-mail cím mezőket ne hagyja üresen");
-        }
-        });
 
     $('.times').on('click', function() {
         $('.container-slider').css({'transform' : 'scale(0)'});
     });
+
+    // űrlap mező 
+        
+        $('.form-group .btn').click(function() {
+
+            var textName = $("#registerName").val();
+            var textEmail = $('#registerEmail').val();
+
+            if(textName  == '') {
+                $('.container-alert').fadeIn(200);
+                $('.container-alert').css({'z-index' : '1'}); 
+                    $('.row-alert').on('click', function() {
+                        $('.container-alert').fadeOut(200);
+                    }); 
+            }
+            else if(textEmail  == '') {
+                $('.container-alert').fadeIn(200); 
+                    $('.row-alert').on('click', function() {
+                        $('.container-alert').fadeOut(200);
+                    });          
+                }
+            else {
+                $('.container-register').fadeIn(200); 
+                $('.container-register').css({'z-index' : '1'}); 
+                $('.row-register h2').on('click', function() {
+                    $('.container-register').fadeOut(200);
+                    $('form').submit();
+                });
+            }
+        });
+
+    // owl carousel 
  
     $('.owl-carousel').owlCarousel({
         loop:true,
@@ -50,16 +71,7 @@ $(document).ready(function() {
         responsive:{
             0:{
                 items:1
-            }/*,
-            768:{
-                items:1
-            },
-            992:{
-                items:1
-            },
-            1920:{
-                items:1
-            }*/
+            }
         }
 	});
 

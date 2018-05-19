@@ -165,6 +165,7 @@ footer {
 
 
 /* hírlevél oldal */
+
 .container-news {
     display: flex;
     justify-content: space-between;
@@ -200,7 +201,7 @@ input, textarea, .form-btn {
     margin-left: 150px;
 }
 
-.card-body button {
+.card-body .btn {
     background-color: #ffffff;
     height: 40px;
     width: 140px;
@@ -235,7 +236,6 @@ input, textarea, .form-btn {
     display: flex;
     align-items: center;
     overflow: auto;
-    /*display: none;*/
     transform: scale(0);
 }
 
@@ -286,11 +286,53 @@ input, textarea, .form-btn {
 }
 
 h4 {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
     position: absolute;
     bottom: 20px;
     left: 20px;
-    text-transform: uppercase;
     color: #ffffff;
+}
+
+.container-alert, .container-register {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row-alert, .row-register {
+    background-color: #ffffff;
+    width: 500px;
+    height: 200px;
+    max-width: calc(100% - 100px);
+    padding: 20px;
+    line-height: 24px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.row-alert p span {
+    color: red;
+}
+
+.row-alert h2, .row-register h2 {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    color:  blue;
+    cursor: pointer;
+    font-weight: 200;
+    font-size: 16px;
 }
 
 
