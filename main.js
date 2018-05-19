@@ -43,7 +43,7 @@ $(document).ready(function() {
 
             if(textName == '') {
                 $('.container-alert').fadeIn(200);
-                $('.container-alert').css({'z-index' : '1' , 'opacity' : '1'}); 
+                $('.container-alert').css({'z-index' : '1' , 'display' : 'flex'}); 
                 $(".form-btn input").attr("type", "button");
                 $('.row-alert').on('click', function() {
                     $('.container-alert').fadeOut(200);
