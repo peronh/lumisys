@@ -53,22 +53,18 @@ $(document).ready(function() {
             else if(textEmail  == '') {
                 $('.container-alert').fadeIn(200); 
                 $('.row-alert').on('click', function() {    
-                $('.container-alert').fadeOut(200);
-                });          
-            }
+                    $('.container-alert').fadeOut(200);
+                    });          
+                }
 
             else if (textEmail  != '') {
                 $(".form-btn input").attr("type", "submit");
             }
-            /*
-            else if ($('form').submit()){
-                $('.container-register').fadeIn(200); 
-                $('.container-register').css({'z-index' : '1'}); 
-                $('.row-register h2').on('click', function() {
-                    $('.container-register').fadeOut(200);
-                }); 
-            }*/
         });
+
+        $("form").submit(function(e){
+            alert("Köszönjük, Ön sikeresen feliratkozott a hírlevélre.");
+            });
 
     // owl carousel 
  
@@ -82,6 +78,4 @@ $(document).ready(function() {
             }
         }
 	});
-
-
 });
